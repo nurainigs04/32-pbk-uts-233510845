@@ -75,6 +75,11 @@ const daftarKegiatan = ref([
     nama: "Mengerjakan proyek",
     jam: "14:30",
     selesai: false
+  },
+  {
+    nama: "Mencuci piring",
+    jam: "16:30",
+    selesai: false
   }
 ])
 const filterStatus = ref('semua')
