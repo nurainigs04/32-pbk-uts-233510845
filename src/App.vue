@@ -31,6 +31,10 @@
         Selesai
       </button>
     </div>
+
+    <div v-if="filteredKegiatan.length === 0" class="empty-state">
+      Tidak ada kegiatan {{ filterStatusText }}
+    </div>
     </div>
 </template>
 
