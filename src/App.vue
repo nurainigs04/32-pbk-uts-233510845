@@ -92,6 +92,10 @@ function tambahKegiatan() {
   kegiatanBaru.value = ''
   jamBaru.value = ''
 }
+
+function hapusKegiatan(index) {
+  daftarKegiatan.value.splice(index, 1)
+}
 </script>
 
 
