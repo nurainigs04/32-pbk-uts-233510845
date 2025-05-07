@@ -40,6 +40,25 @@ import { ref, computed } from 'vue'
 const kegiatanBaru = ref('')
 const jamBaru = ref('')
 const daftarKegiatan = ref([])
+const filterStatus = ref('semua')
+
+const kegiatanSelesai = computed(() => {
+  return daftarKegiatan.value.filter(item => item.selesai)
+})
+
+const kegiatanAktif = computed(() => {
+  return daftarKegiatan.value.filter(item => !item.selesai)
+})
+
+const filteredKegiatan = computed(() => {
+  if (filterStatus.value === 'aktif') {
+    return kegiatanAktif.value
+  } else if (filterStatus.value === 'selesai') {
+    return kegiatanSelesai.value
+  } else {
+    return daftarKegiatan.value
+  }
+})
 
 function tambahKegiatan() {
   if (kegiatanBaru.value.trim() === '' || jamBaru.value.trim() === '') return
