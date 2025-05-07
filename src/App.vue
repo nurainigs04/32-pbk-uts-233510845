@@ -16,6 +16,19 @@ import { ref, computed } from 'vue'
 const kegiatanBaru = ref('')
 const jamBaru = ref('')
 const daftarKegiatan = ref([])
+
+function tambahKegiatan() {
+  if (kegiatanBaru.value.trim() === '' || jamBaru.value.trim() === '') return
+
+  daftarKegiatan.value.push({
+    nama: kegiatanBaru.value,
+    jam: jamBaru.value,
+    selesai: false
+  })
+
+  kegiatanBaru.value = ''
+  jamBaru.value = ''
+}
 </script>
 
 
