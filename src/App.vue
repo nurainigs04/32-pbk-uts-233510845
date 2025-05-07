@@ -35,6 +35,22 @@
     <div v-if="filteredKegiatan.length === 0" class="empty-state">
       Tidak ada kegiatan {{ filterStatusText }}
     </div>
+
+    <ul v-else>
+      <li
+        v-for="(item, index) in filteredKegiatan"
+        :key="index"
+        class="list-item"
+      >
+        <label>
+          <input type="checkbox" v-model="item.selesai" />
+          <span :class="{ selesai: item.selesai }">
+            {{ item.nama }} - {{ item.jam }}
+          </span>
+        </label>
+        <button @click="hapusKegiatan(daftarKegiatan.indexOf(item))" class="hapus-btn">🗑️</button>
+      </li>
+    </ul>
     </div>
 </template>
 
