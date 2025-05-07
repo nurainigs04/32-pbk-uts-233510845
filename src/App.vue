@@ -7,6 +7,30 @@
         <input v-model="jamBaru" type="time" />
         <button type="submit">➕ Tambah</button>
       </form>
+
+      <div class="filter-container">
+      <button 
+        @click="filterStatus = 'semua'" 
+        :class="{ active: filterStatus === 'semua' }"
+        class="filter-btn"
+      >
+        Semua
+      </button>
+      <button 
+        @click="filterStatus = 'aktif'" 
+        :class="{ active: filterStatus === 'aktif' }"
+        class="filter-btn"
+      >
+        Belum Selesai
+      </button>
+      <button 
+        @click="filterStatus = 'selesai'" 
+        :class="{ active: filterStatus === 'selesai' }"
+        class="filter-btn"
+      >
+        Selesai
+      </button>
+    </div>
     </div>
 </template>
 
