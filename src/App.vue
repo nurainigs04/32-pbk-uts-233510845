@@ -80,6 +80,16 @@ const filteredKegiatan = computed(() => {
   }
 })
 
+const filterStatusText = computed(() => {
+  if (filterStatus.value === 'aktif') {
+    return 'yang belum selesai'
+  } else if (filterStatus.value === 'selesai') {
+    return 'yang sudah selesai'
+  } else {
+    return ''
+  }
+})
+
 function tambahKegiatan() {
   if (kegiatanBaru.value.trim() === '' || jamBaru.value.trim() === '') return
 
