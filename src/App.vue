@@ -51,6 +51,12 @@
         <button @click="hapusKegiatan(daftarKegiatan.indexOf(item))" class="hapus-btn">🗑️</button>
       </li>
     </ul>
+
+    <div class="status-bar">
+      <span>Total: {{ daftarKegiatan.length }} kegiatan</span>
+      <span>Selesai: {{ kegiatanSelesai.length }}</span>
+      <span>Belum Selesai: {{ kegiatanAktif.length }}</span>
+    </div>
     </div>
 </template>
 
