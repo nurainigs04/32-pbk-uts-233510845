@@ -65,7 +65,18 @@ import { ref, computed } from 'vue'
 
 const kegiatanBaru = ref('')
 const jamBaru = ref('')
-const daftarKegiatan = ref([])
+const daftarKegiatan = ref([
+  {
+    nama: "Belajar Vue.js",
+    jam: "10:00",
+    selesai: true
+  },
+  {
+    nama: "Mengerjakan proyek",
+    jam: "14:30",
+    selesai: false
+  }
+])
 const filterStatus = ref('semua')
 
 const kegiatanSelesai = computed(() => {
