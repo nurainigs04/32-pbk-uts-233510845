@@ -116,4 +116,151 @@ function hapusKegiatan(index) {
 
 
 <style scoped>
+.app {
+  max-width: 500px;
+  margin: 2rem auto;
+  padding: 1rem 1.5rem;
+  background: linear-gradient(135deg, #f0f4ff, #d0e4ff);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+form {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+input[type='text'],
+input[type='time'] {
+  padding: 0.5rem;
+  flex: 1;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+input[type='text']:focus,
+input[type='time']:focus {
+  border-color: #0077ff;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  background-color: #0077ff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.1s;
+}
+
+button:hover {
+  background-color: #005fcc;
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+.filter-container {
+  display: flex;
+  gap: 0.5rem;
+  margin: 1rem 0;
+  justify-content: center;
+}
+
+.filter-btn {
+  background-color: #e0e0e0;
+  color: #333;
+  font-size: 0.9rem;
+  padding: 0.3rem 0.75rem;
+}
+
+.filter-btn:hover {
+  background-color: #d0d0d0;
+}
+
+.filter-btn.active {
+  background-color: #0077ff;
+  color: white;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+.list-item {
+  background: white;
+  padding: 0.75rem;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  margin-bottom: 0.5rem;
+}
+
+.list-item label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex: 1;
+  min-width: 0;
+}
+
+.list-item span {
+  font-size: 1rem;
+  color: #333; 
+  word-break: break-word;
+  flex: 1;
+}
+
+.selesai {
+  text-decoration: line-through;
+  color: gray !important; 
+}
+
+.hapus-btn {
+  background: transparent;
+  color: #ff4d4d;
+  padding: 0.25rem;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: transform 0.2s ease;
+}
+
+.hapus-btn:hover {
+  transform: scale(1.2);
+}
+
+.status-bar {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid #ccc;
+  font-size: 0.85rem;
+  color: #555;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 1.5rem;
+  color: #777;
+  font-style: italic;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 8px;
+  margin: 1rem 0;
+}
 </style>
